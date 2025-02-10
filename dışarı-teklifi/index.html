@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benimle Dışarı Çıkar Mısın</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+    <!-- Sayfa 1: Ana Sayfa -->
+    <div id="page1" class="page active">
+        <h1>Benimle dışarı çıkamazsın? 🤍</h1>
+        <div class="buttons">
+            <button id="yes" onclick="showPage('page2')">Hayır Çıkabilirim 🙂↕️</button>
+            <button id="no"  >Zıt Erenköy 💔</button>
+        </div>
+    </div>
+
+    <!-- Sayfa 2: Aktivite Seçimi -->
+    <div id="page2" class="page">
+        <h1>Birlikte Ne Yapalım? 💖</h1>
+        <div class="activities">
+            <div class="activity" onclick="selectActivity('İtalyan Restoranı')">
+                <img src="https://static.independent.co.uk/2024/04/25/16/iStock-1414575281.jpg" alt="İtalyan Restoranı">
+                <p>İtalyan Restoranı</p>
+            </div>
+            <div class="activity" onclick="selectActivity('Suşi Yemeye Gitme')">
+                <img src="https://i1.imgiz.com/rshots/9034/recep-wasabi-yerse-recep-ivedik-2_9034670-9650_1200x630.jpg" alt="Suşi">
+                <p>Suşi Yemek</p>
+            </div>
+            <div class="activity" onclick="selectActivity('Sinema')">
+                <img src="https://static.boxofficeturkiye.com/movie/poster/300x429/60/2017760-73228450.jpg" alt="Sinema">
+                <p>Çakal Sinema</p>
+            </div>
+            <div class="activity" onclick="selectActivity('Çay İçmek')">
+                <img src="https://www.popeyes.com.tr/cmsfiles/products/cay.png?v=305" alt="Çay İçmek">
+                <p>Çay İçmek</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sayfa 3: Tarih Seçimi -->
+    <div id="page3" class="page">
+        <h1>Birlikte Ne Zaman Buluşalım? 📅</h1>
+        <div class="dates">
+            <div class="date-option" onclick="selectDate('Herhangi Başka Tarih')">Herhangi Başka Tarih??</div>
+            <div class="date-option" onclick="selectDate('13 Şubat')">13 Şubat</div>
+            <div class="date-option" onclick="selectDate('14 Şubat')">14 Şubat</div>
+            <div class="date-option" onclick="selectDate('15 Şubat')">15 Şubat</div>
+        </div>
+    </div>
+    
+    <!-- Sayfa 4: Final Sayfası -->
+    <div id="page4" class="page">
+        <h1>Helal sana Yusufi! 🎉</h1>
+        <p>Buluşma detayların başarıyla seçildi!</p>
+        <div class="summary">
+            <p><strong>Aktivite:</strong> <span id="chosenActivity"></span></p>
+            <p><strong>Tarih:</strong> <span id="chosenDate"></span></p>
+        </div>
+        <button class="whatsapp-button" onclick="sendWhatsApp()">WhatsApp ile Gönder</button>
+    </div>
+<!--<span> etiketi, genellikle bir parçada stil değiştirme, etkileşim veya başka bir işlevsellik eklemek için kullanılır.
+         Metni bir konteynerle sarmak, fakat görünüşte herhangi bir blok yapısı yaratmamak için ideal bir öğedir. -->
+
+         <div id="page5" class="page">
+            <h1>💔 Sağlık Olsun</h1>
+            <p>Belki bir dahaki sefere...</p>
+            <button onclick="showPage('page1')">Geri Dön</button>
+        </div>
+
+        <script src="script.js"></script>
+        
+</body>
+
+
+
+
+
+
+</html>

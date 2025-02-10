@@ -1,0 +1,138 @@
+body{
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #ffe6e6;
+    background-image: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    margin: 0;
+    padding: 20px;
+
+}
+
+h1 {
+    margin-bottom: 60px;
+    font-size: 32px;
+    color: #6a0572;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;  /* Yatayda ortalama */
+    align-items: center;       /* Dikeyde hizalama */
+    gap: 20px;                 /* Butonlar arası boşluk */
+    flex-wrap: nowrap;         /* Alt alta geçmeyi engeller */
+    width: 100%;
+    max-width: 500px;          /* Biraz daha geniş alan */
+    margin: 0 auto;            /* Merkezde olmasını sağlar */
+    text-align: center;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* [x-offset] [y-offset] [blur-radius] [color];*/
+    transition: all 0.3s ease; /* Geçiş hızını kontrol eder (animasyon eğrisi).
+	•	ease: Başta hızlı, sonra yavaşlar. (doğal görünür)
+	•	linear: Hep aynı hızda gider.
+	•	ease-in: Yavaş başlar, hızlanır.
+	•	ease-out: Hızlı başlar, yavaşlar.
+	•	ease-in-out: Yavaş başlar, ortada hızlanır, sonra tekrar yavaşlar.*/
+}
+
+#yes {
+    background-color: #ff4d6d;
+    color: white;
+}
+#yes:hover {
+    background-color: #e60040;
+}
+
+#no {
+    background-color: #b3001b;
+    color: white;
+    position: relative; /* Hareket için relative yaptık */
+    transition: left 0.2s, top 0.2s;
+}
+
+#no:hover {
+    background-color: #ff1a40;
+    left: 20px; /* Hover olduğunda hafif sağa kaçar */
+    top: -10px;  /* Hafif yukarı kaçar */
+}
+
+.activities, .dates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Her öğe arasındaki boşluk */
+}
+/* flex-wrap: nowrap; (Varsayılan): Öğeler tek bir satırda veya sütunda sıralanır ve container genişliğini aşarsa, öğeler boyutlarını küçültür.
+	2.	flex-wrap: wrap;: Öğeler container’ın sınırlarını aşarsa, bir sonraki satıra (veya sütuna) sarılır.
+	3.	flex-wrap: wrap-reverse;: Öğeler yine sarılır, ancak son satır (veya sütun) önce gelir.*/
+
+
+.activity, .date-option {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.activity:hover, .date-option:hover {
+    transform: scale(1.2);
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover; /* Resmi container'a sığdırır */
+}
+
+.summary {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.whatsapp-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.whatsapp-button:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.2);
+}
+.page {
+    display: none;
+    width: 100%;
+}
+
+.page.active {
+    display: block;
+}
+
+#page5 h1 {
+    color: #ff4d6d;
+    font-size: 2.5em;
+}
